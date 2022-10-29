@@ -1,38 +1,188 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.container-esterno{
+  background-image: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
   min-height: 100vh;
+}
+
+.prima-pic-desktop,
+.seconda-pic-desktop,
+.desktop-element {
+  display: none;
+}
+
+.prima-pic{
+  position: absolute;
+  width: 70%;
+  top: 35px;
+  left: 60px;
+  z-index: 1;
+}
+
+.seconda-pic{
+  position: absolute;
+  top: 155px;
+  left: 70px;
+}
+
+.container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding-top: 150px;
 }
 
-.App-link {
-  color: #61dafb;
+.faq{
+  display: flex;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.wrapper {
+  display: flex;
+  width: 90%;
+  min-height: 50vh;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  padding-top: 125px;
+  padding-bottom: 50px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.accordion {
+  width: 80%;
+}
+
+.item {
+  background-color: white;
+  border-bottom: 2px solid hsl(240, 5%, 91%);
+  margin-bottom: 15px;
+}
+
+.title{
+  color:hsl(240, 7%, 44%);
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-family: 'Lato';
+  font-size: 12px;
+}
+
+.title:hover{
+  color: hsl(14, 88%, 65%);
+}
+
+.title.focus {
+  color: hsl(238, 29%, 16%);
+}
+
+.arrow{
+  transition: 0.3s;
+}
+
+.arrow.rotate{
+transform: rotate(180deg);
+}
+
+.content {
+  color: #8b7f75;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(0,1,0,1);
+  font-size: 12px;
+}
+
+
+.content.show {
+  height: auto;
+  max-height: 9999px; 
+  transition: all 0.5s cubic-bezier(1,0,1,0)
+}
+
+@media only screen and (min-width: 1440px) {
+
+  .container{
+    z-index: 2;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .prima-pic{
+    display: none;
+  }
+  .seconda-pic{
+    display: none;
+  }
+
+  .wrapper{
+    width: 60%;
+    padding-top: 50px;
+  }
+
+  .accordion{
+    width: 35%;
+  }
+
+  .faq{
+    justify-content: flex-start;
+  }
+  
+  .spacer{
+    display: flex;
+    width: 50%;
+    min-height: 50vh;
+    flex-direction: column;
+  }
+
+  .prima-pic-desktop,
+  .seconda-pic-desktop,
+  .desktop-element {
+    display: block;
+  }
+
+  .prima-pic-desktop {
+    width: 100%;
+    height: 371px;
+    background-repeat: no-repeat;
+    background-position: 190% center;
+    position: relative;
+    left: -65px;
+    z-index: 3;
+  }
+
+  .seconda-pic-desktop img{
+    position: absolute;
+    width: 396px;
+    height: 505px;
+    object-fit: none;
+    object-position: 100% -300px;
+    bottom: 155px;
+    left: 287px;
+    z-index: 2;
+    border-radius: 20px;
+  }
+
+
+  .desktop-element {
+    position: absolute;
+    bottom: 288px;
+    left: 157px;
+    z-index: 4;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+
+  .prima-pic-desktop {
+    background-position: center;
+    left: -222px;
+  }
+
+  .seconda-pic-desktop img {
+    height: 492px;
+    bottom: 84px;
+    left: 384px;
+  }
+
+  .desktop-element{
+    bottom: 187px;
+    left: 249px;
   }
 }
