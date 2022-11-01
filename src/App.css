@@ -114,6 +114,7 @@ transform: rotate(180deg);
   .wrapper{
     width: 60%;
     padding-top: 50px;
+    margin-bottom: 50px;
   }
 
   .accordion{
@@ -127,7 +128,6 @@ transform: rotate(180deg);
   .spacer{
     display: flex;
     width: 50%;
-    min-height: 50vh;
     flex-direction: column;
   }
 
@@ -137,33 +137,44 @@ transform: rotate(180deg);
     display: block;
   }
 
+  .container-pic-desktop {
+    width: 250px;
+    height: 250px;
+    position: relative;
+  }
+
   .prima-pic-desktop {
-    width: 100%;
+    width: 194%;
     height: 371px;
     background-repeat: no-repeat;
-    background-position: 190% center;
+    /* background-position: 190% center; */
     position: relative;
-    left: -65px;
+    left: -146px;
     z-index: 3;
   }
 
   .seconda-pic-desktop img{
-    position: absolute;
-    width: 396px;
-    height: 505px;
+    position: relative;
+    width: 499px;
+    height: 546px;
     object-fit: none;
-    object-position: 100% -300px;
-    bottom: 155px;
-    left: 287px;
+    object-position: 123%;
+    top: -519px;
+    left: -65px;
     z-index: 2;
     border-radius: 20px;
   }
 
+  .desktop-element{
+    position: relative;
 
-  .desktop-element {
+  }
+
+
+  .desktop-element img {
     position: absolute;
-    bottom: 288px;
-    left: 157px;
+    bottom: 104px;
+    left: -138px;
     z-index: 4;
   }
 }

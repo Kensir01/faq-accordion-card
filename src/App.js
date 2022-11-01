@@ -30,18 +30,22 @@ function App() {
       </div>
 
       <div className="container">
+      
+        <div className='desktop-element'>
+          <img src={desktopElement} alt='Red Cube'/>
+        </div>
 
         <div className="wrapper">
 
           <div className='spacer'>
-            
-            <div className="prima-pic-desktop" style={{ backgroundImage: `url(${desktopWoman})`}}>
-            </div>
-            <div className="seconda-pic-desktop">
-             <img src={desktopBg} alt='bg'/>
-            </div>
-            <div className='desktop-element'>
-              <img src={desktopElement} alt='Red Cube'/>
+
+            <div className='container-pic-desktop'>
+              <div className="prima-pic-desktop" style={{ backgroundImage: `url(${desktopWoman})`}}>
+              </div>
+              <div className="seconda-pic-desktop">
+              <img src={desktopBg} alt='bg'/>
+              </div>
+
             </div>
 
           </div>
